@@ -7,8 +7,11 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
       component: () => import("./views/Home.vue")
+    },
+    {
+      path: "/*",
+      component: () => import("./views/BadURL.vue")
     }
   ]
 });
